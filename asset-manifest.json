@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/form-app/static/css/main.b9eac275.css",
+    "main.js": "/form-app/static/js/main.d9f4eb6e.js",
+    "index.html": "/form-app/index.html",
+    "static/media/ok.svg": "/form-app/static/media/ok.ed0e3ac6d53a5ccf4fd8.svg",
+    "main.b9eac275.css.map": "/form-app/static/css/main.b9eac275.css.map",
+    "main.d9f4eb6e.js.map": "/form-app/static/js/main.d9f4eb6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9eac275.css",
+    "static/js/main.d9f4eb6e.js"
+  ]
+}

@@ -96,7 +96,7 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: "http://34.150.96.196:8000",
+  baseUrl: "http://34.92.175.180:8000",
   headers: {
     "Content-Type": "application/json",
   },

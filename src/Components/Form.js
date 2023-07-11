@@ -1,16 +1,17 @@
 const Form = ({ children, submitter, isOpen }) => {
-  
   const handleSubmit = (event) => {
     event.preventDefault();
-    submitter()
+    submitter();
   };
 
   return (
     <form className="form-section" onSubmit={handleSubmit}>
       {children}
-      {isOpen && <button className="form-section__submit" type="submit">
-        Отправить
-      </button>}
+      {isOpen && (
+        <button className="form-section__submit" type="submit">
+          Отправить
+        </button>
+      )}
     </form>
   );
 };

@@ -105,6 +105,7 @@ const NameConcept = () => {
             inputName="target"
             setState={setTarget}
             alterValue={target}
+            isRequired={true}
           />
         )}
         {!isTargetOpen && (
@@ -123,6 +124,7 @@ const NameConcept = () => {
             inputName="format"
             setState={setFormat}
             alterValue={format}
+            isRequired={true}
           />
         )}
         {!isFormatOpen && (
@@ -160,6 +162,7 @@ const NameConcept = () => {
             inputName="format"
             setState={setToneOfVoice}
             alterValue={toneOfVoice}
+            isRequired={false}
           />
         )}
 

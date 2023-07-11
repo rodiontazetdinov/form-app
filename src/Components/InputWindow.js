@@ -1,14 +1,21 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
-
-const InputWindow = ({ number, title, subtitle, inputName, setState, alterValue }) => {
-    const [textInput, setTextInput] = useState('');
-    const dispatch = useDispatch();
+const InputWindow = ({
+  number,
+  title,
+  subtitle,
+  inputName,
+  setState,
+  alterValue,
+  isRequired,
+}) => {
+  const [textInput, setTextInput] = useState("");
+  const dispatch = useDispatch();
 
   const handleInputChange = (event) => {
     setTextInput(event.target.value);
-    dispatch(setState(event.target.value))
+    dispatch(setState(event.target.value));
   };
 
   return (
@@ -19,13 +26,15 @@ const InputWindow = ({ number, title, subtitle, inputName, setState, alterValue 
         <p className="input-window__subtitle">{subtitle}</p>
         <p className="input-window__counter">{`${textInput.length}/250`}</p>
         <textarea
-            className="input-window__input"
-            type="text" value={textInput || alterValue}
-            onChange={handleInputChange}
-            minLength={2}
-            maxLength={250}
-            name={inputName}
-            />
+          className="input-window__input"
+          type="text"
+          value={textInput || alterValue}
+          onChange={handleInputChange}
+          minLength={2}
+          maxLength={250}
+          name={inputName}
+          required={isRequired && "required"}
+        />
       </div>
     </div>
   );

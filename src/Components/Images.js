@@ -8,6 +8,12 @@ const Images = ({ number, title, onBtnClick }) => {
   const selectedImage = useSelector((state) => state.selectedImage);
   const isImagesOpen = useSelector((state) => state.isImagesOpen);
 
+  const models = {
+    1: "KD",
+    2: "SD",
+    3: "DA",
+  };
+
   const handleImageClick = (image) => {
     dispatch(selectImage(image));
     dispatch(toggleImagesOpen());
@@ -34,17 +40,20 @@ const Images = ({ number, title, onBtnClick }) => {
       {isImagesOpen && (
         <div className="images__container">
           {images.map((image, index) => (
-            <img
-              key={index}
-              src={`data:image/png;base64,${image}`}
-              alt={`Image ${index}`}
-              className={
-                selectedImage === image
-                  ? "images__image_selected"
-                  : "images__image"
-              }
-              onClick={() => handleImageClick(image)}
-            />
+            <>
+              <h3>{models[index + 1 + ""]}</h3>
+              <img
+                key={index}
+                src={`data:image/png;base64,${image}`}
+                alt={`Image ${index}`}
+                className={
+                  selectedImage === image
+                    ? "images__image_selected"
+                    : "images__image"
+                }
+                onClick={() => handleImageClick(image)}
+              />
+            </>
           ))}
         </div>
       )}

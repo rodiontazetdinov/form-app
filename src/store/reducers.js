@@ -24,29 +24,29 @@ const initialState = {
   visualCategory: "realistic_picture",
   isVisualCategoryOpen: true,
   images: [],
-  selectedImage: '',
+  selectedImage: "",
   isImagesOpen: true,
-  presentation: ''
+  presentation: "",
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_PRESENTATION':
+    case "SET_PRESENTATION":
       return {
         ...state,
         presentation: action.payload,
       };
-    case 'SET_IMAGES':
+    case "SET_IMAGES":
       return {
         ...state,
         images: action.payload,
       };
-    case 'TOGGLE_IMAGES_OPEN':
+    case "TOGGLE_IMAGES_OPEN":
       return {
         ...state,
         isImagesOpen: !state.isImagesOpen,
       };
-    case 'SELECT_IMAGE':
+    case "SELECT_IMAGE":
       return {
         ...state,
         selectedImage: action.payload,

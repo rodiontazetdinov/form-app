@@ -261,6 +261,18 @@
   margin-top: 15px;
 }
 
+.temperature__counter {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+  text-align: center;
+  margin-left: 20px;
+}
+
 .temperature__nubmer {
   background: #CBD8F1;
   font-family: 'Roboto';

@@ -14,7 +14,6 @@ import {
   toggleAudienceOpen,
   toggleProductOpen,
   toggleGeneratedInsightsOpen,
-  toggleFormatOpen,
   toggleIsLoaidng,
 } from "../store/actions";
 
@@ -38,7 +37,6 @@ const Insight = () => {
 
   const handleGeneratedInsightsState = () => {
     dispatch(toggleGeneratedInsightsOpen());
-    console.log(choosedInsight)
   };
 
   const submitInsight = () => {
@@ -47,8 +45,6 @@ const Insight = () => {
       .postInsights({ product: product, audience: audience })
       .then((insights) => {
         dispatch(setInsights(insights.insight));
-        console.log(insights);
-        console.log(choosedInsight);
         handleInputsState();
       })
       .catch((error) => {
@@ -57,12 +53,9 @@ const Insight = () => {
       .finally(() => {
         dispatch(toggleIsLoaidng());
       });
-
-    console.log(product, audience);
   };
 
   const handeChoosedInsight = (item) => {
-    console.log(item)
     dispatch(setChosenInsight(item));
   };
 
@@ -81,6 +74,7 @@ const Insight = () => {
             inputName="product"
             setState={setProduct}
             alterValue={product}
+            isRequired={true}
           />
         )}
         {isProductOpen && (
@@ -91,6 +85,7 @@ const Insight = () => {
             inputName="audience"
             setState={setAudience}
             alterValue={audience}
+            isRequired={false}
           />
         )}
 

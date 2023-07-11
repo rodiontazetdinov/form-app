@@ -1,17 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import {
-  setChosenInsight,
-  toggleGeneratedInsightsOpen,
-} from "../store/actions";
+import React, { useState } from "react";
 
 import Response from "./Response";
-
-import {
-  saveRequestToLocalStorage,
-  getRequestsFromLocalStorage,
-} from "../utils/functions";
 
 const Responses = ({
   title,
@@ -21,15 +10,11 @@ const Responses = ({
   isConceptPair,
   submitter,
 }) => {
-  const dispatch = useDispatch();
-  const choosedInsigth = useSelector((state) => state.choosedInsigth);
-
   const [selectedItem, setSelectedItem] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
-    // dispatch(action(item))
     action(item);
   };
 
@@ -37,8 +22,6 @@ const Responses = ({
     e.preventDefault();
     setIsSubmitted(true);
     submitter();
-
-    // Действия, которые нужно выполнить при отправке выбранного результата
   };
 
   return (

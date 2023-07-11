@@ -58,7 +58,7 @@ class Api {
       body: JSON.stringify({
         visual_category,
         name,
-        concept
+        concept,
       }),
     });
   }
@@ -68,7 +68,7 @@ class Api {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({
-        visual
+        visual,
       }),
     });
   }
@@ -77,10 +77,11 @@ class Api {
     return this._request(`${this._baseUrl}/generate_presentation/`, {
       method: "POST",
       headers: this._headers,
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         imageString: imageString,
         name: name,
-        concept: concept }),
+        concept: concept,
+      }),
     });
   }
 
@@ -88,10 +89,10 @@ class Api {
     return fetch(`${this._baseUrl}/download/`, {
       method: "POST",
       headers: this._headers,
-      body: JSON.stringify({ 
-        filename: filename }),
-    })
-    .then(response => response.blob())
+      body: JSON.stringify({
+        filename: filename,
+      }),
+    }).then((response) => response.blob());
   }
 }
 

@@ -10,7 +10,6 @@ const DownloadPresentation = () => {
   const selectedImage = useSelector((state) => state.selectedImage);
   const name = useSelector((state) => state.name);
   const concept = useSelector((state) => state.concept);
-  const presentation = useSelector((state) => state.presentation);
 
   const downloadFile = (file, filename) => {
     const blobUrl = URL.createObjectURL(file);
@@ -37,7 +36,6 @@ const DownloadPresentation = () => {
         api
           .downloadPresentation({ filename: data.presentation })
           .then((file) => {
-            console.log("file", file);
             downloadFile(file, "presentation.pdfs");
           })
           .catch((error) => {
@@ -52,7 +50,9 @@ const DownloadPresentation = () => {
 
   return (
     <div className="downloader">
-      <button className="downloader__btn" onClick={submitConcept}>Скачать</button>
+      <button className="downloader__btn" onClick={submitConcept}>
+        Скачать
+      </button>
     </div>
   );
 };

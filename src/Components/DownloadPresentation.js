@@ -36,7 +36,7 @@ const DownloadPresentation = () => {
         api
           .downloadPresentation({ filename: data.presentation })
           .then((file) => {
-            downloadFile(file, "presentation.pdfs");
+            downloadFile(file, "presentation.pdf");
           })
           .catch((error) => {
             console.log(error);

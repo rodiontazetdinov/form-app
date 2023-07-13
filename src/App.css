@@ -528,7 +528,36 @@
 .responses__checkbox:checked {
   /* Style the checked radio button */
   border-color: #B6F1EE;
+  /* background-color: #fff; */
+  left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #B6F1EE;
+    border-bottom: 4px solid #B6F1EE;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
  /* Replace with your desired color */
+}
+
+/* input[type="checkbox"]:checked + label:after,  */
+.responses__checkbox:not(:checked) {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #B6F1EE;
+    border-bottom: 4px solid #B6F1EE;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .responses__checkbox:focus {

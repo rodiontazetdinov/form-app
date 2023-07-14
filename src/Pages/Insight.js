@@ -121,7 +121,7 @@ const Insight = () => {
       {!isGeneratedInsightsOpen && (
         <ClosedWindow
           number={2}
-          title={"Generated insights"}
+          title={"generated insights"}
           subtitle={choosedInsight}
           inputName="generatedInsights"
           setState={handleGeneratedInsightsState}

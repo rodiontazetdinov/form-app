@@ -13,14 +13,15 @@ const Response = ({ item, onItemClick, isSelected, isConceptPair }) => {
           checked={isSelected}
           onChange={handleItemClick}
         />
-        {!isConceptPair && <p className="responses__text">{item}</p>}
-        {isConceptPair && (
-          <>
-            <h2 className="responses__header">{item.name}</h2>
-            <p className="responses__text">{item.concept}</p>
-          </>
-        )}
+        <span className="checkmark"></span>
       </label>
+      {!isConceptPair && <p className="responses__text">{item}</p>}
+      {isConceptPair && (
+        <>
+          <h2 className="responses__header">{item.name}</h2>
+          <p className="responses__text">{item.concept}</p>
+        </>
+      )}
     </li>
   );
 };

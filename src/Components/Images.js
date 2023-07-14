@@ -19,10 +19,6 @@ const Images = ({ number, title, onBtnClick }) => {
     dispatch(toggleImagesOpen());
   };
 
-  const handleToggleImagesOpen = () => {
-    dispatch(toggleImagesOpen());
-  };
-
   return (
     <div>
       <div className="images">

@@ -168,7 +168,7 @@ const NameConcept = () => {
 
         {!isTemperatureOpen && (
           <ClosedWindow
-            title={"toneOfVoice"}
+            title={"tone of voice"}
             subtitle={toneOfVoice}
             inputName="toneOfVoice"
             setState={handleInputsState}
@@ -187,7 +187,7 @@ const NameConcept = () => {
       )}
       {!isGeneratedConceptsOpen && (
         <ClosedWindow
-          title={"Generated concepts"}
+          title={"generated concepts"}
           subtitle={choosedConcept}
           inputName="generatedConcepts"
           setState={handleGeneratedConceptsState}

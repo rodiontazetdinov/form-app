@@ -45,7 +45,9 @@ const DownloadPresentation = () => {
       .catch((error) => {
         console.log(error);
       })
-      .finally(() => dispatch(toggleIsLoaidng()));
+      .finally(() => {
+        dispatch(toggleIsLoaidng());
+      });
   };
 
   return (

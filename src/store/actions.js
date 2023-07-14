@@ -1,5 +1,5 @@
 export const setPresentation = (presentation) => ({
-  type: "SET_IMAGES",
+  type: "SET_PRESENTATION",
   payload: presentation,
 });
 

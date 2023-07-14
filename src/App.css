@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   background: #E4E9CF;
@@ -99,7 +98,6 @@
   flex-direction: column;
   justify-content: center;
   max-width: 820px;
-  /* margin: 0 auto; */
 }
 
 .form-section__submit {
@@ -117,7 +115,6 @@
   display: flex;
   flex-direction: row;
   margin-right: auto;
-  /* margin-left: auto; */
   margin-top: 15px;
 }
 
@@ -257,7 +254,6 @@
   display: flex;
   flex-direction: row;
   margin-right: auto;
-  /* margin-left: auto; */
   margin-top: 15px;
 }
 
@@ -321,7 +317,6 @@
   display: flex;
   flex-direction: row;
   margin-right: auto;
-  /* margin-left: auto; */
   margin-top: 15px;
 }
 
@@ -362,8 +357,8 @@
 }
 
 .images__image {
-  width: 240px;
-  height: 240px;
+  width: 210px;
+  height: 210px;
   margin: 10px;
   cursor: pointer;
 }
@@ -403,7 +398,6 @@
   background: #B6F1EE;
   align-self:flex-end;
   margin: 14px;
-  /* position: absolute; */
 }
 
 /* Компонент Responses */
@@ -412,7 +406,6 @@
   flex-direction: column;
   max-width: 820px;
   margin-right: auto;
-  /* margin-left: auto; */
 }
 
 .responses__main {
@@ -425,8 +418,6 @@
 .responses__wrapper {
   display: flex;
   flex-direction: column;
-  /* width: calc(100%-49px) */
-  /* position: relative; */
 }
 
 .responses__title {
@@ -475,99 +466,79 @@
   background: #B6F1EE;
   align-self:flex-end;
   margin: 14px;
-  /* position: absolute; */
 }
 
 .responses__response {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: left;
-  line-height: 2px;
+  line-height: 37px;
 }
 .responses__lable {
   display: flex;
-  align-items: center;
   line-height: 1;
+  position: relative;
+  user-select: none;
 }
 
 .responses__text {
   word-wrap: break-word;
   align-self: baseline;
+  line-height: 1.4;
+  margin-left: 5px;
 }
 
 .responses__header {
   word-wrap: break-word;
   align-self: baseline;
+  margin-left: 5px;
 }
 
 .responses__checkbox {
-  width: 29px;
-  height: 29px;
-  flex-shrink: 0;
+  opacity: 0;
+    height: 0;
+    width: 0;
+    margin-top: 10px;
+}
+
+.checkmark {
+  height: 23px;
+  width: 22px;
   background-color: #CBD8F1;
-  align-self: baseline;
 }
-
-.responses__checkbox {
-  /* Hide the default radio button */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 2%;
-  border: 2px solid #ccc;
-  outline: none;
+.responses__lable:hover input ~ .checkmark {
+  background-color: #b8c5dc;
   cursor: pointer;
-  transition: border-color 0.2s ease-in-out;
-  margin-right: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
-.responses__checkbox:checked {
-  /* Style the checked radio button */
-  border-color: #B6F1EE;
-  /* background-color: #fff; */
-  left: 3px;
-    top: 4px;
-    width: 10px;
-    height: 5px;
-    border-radius: 1px;
-    border-left: 4px solid #B6F1EE;
-    border-bottom: 4px solid #B6F1EE;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
- /* Replace with your desired color */
+.responses__lable input:checked ~ .checkmark {
+  background-color: #2196f3;
 }
 
-/* input[type="checkbox"]:checked + label:after,  */
-.responses__checkbox:not(:checked) {
-    left: 3px;
-    top: 4px;
-    width: 10px;
-    height: 5px;
-    border-radius: 1px;
-    border-left: 4px solid #B6F1EE;
-    border-bottom: 4px solid #B6F1EE;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-.responses__checkbox:focus {
-  /* Style the radio button when focused */
-  box-shadow: 0 0 0 2px #B6F1EE; /* Replace with your desired color and box shadow styles */
+.responses__lable input:checked ~ .checkmark:after {
+
+  display: block;
+
+}
+
+.container .checkmark:after {
+  left: 8px;
+  top: 6px;
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /* Компонент Start */
 .text-box {
-  /* margin-left: 44vw; */
  margin-top: 26vh;
  display: flex;
  justify-content: center;
@@ -582,7 +553,6 @@
   display: inline-block;
   border-radius: 100px;
   transition: all .2s;
-  /* position: absolute; */
 }
 
 .btn:hover {

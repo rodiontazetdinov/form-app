@@ -31,7 +31,7 @@ const ClosedWindow = ({
           maxLength={250}
           name={inputName}
         >
-          Edit description
+          {`edit ${title}`}
         </button>
       </div>
     </div>
